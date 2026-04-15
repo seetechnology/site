@@ -196,28 +196,45 @@
 </script>
 
 <script>
-  function enviarWhatsApp(event) {
-    // NÃO usar preventDefault aqui
-    // deixa o form enviar email normalmente
+function enviarWhatsApp(event) {
+    event.preventDefault();
 
+    // Capturar valores
     const assunto = document.querySelector('select[name="assunto"]').value;
     const nome = document.querySelector('input[name="name"]').value;
     const email = document.querySelector('input[name="email"]').value;
     const mensagem = document.querySelector('textarea[name="message"]').value;
 
-    const texto = `Novo contato SeeTech:
-    Assunto: ${assunto}
-    Nome: ${nome}
-    Email: ${email}
-    Mensagem: ${mensagem}`;
+    // Validação extra (garantia)
+    if (!assunto || !nome || !email || !mensagem) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+    }
 
+    // Montar mensagem
+    const texto = 
+`   *Novo contato pelo site SeeTech*%0A%0A
+    *Assunto:* ${assunto}%0A
+    *Nome:* ${nome}%0A
+    *Email:* ${email}%0A
+    *Mensagem:* ${mensagem}`;
+
+    // Número WhatsApp (sem espaços, traços ou parênteses)
     const telefone = "5511982160046";
-    const url = `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
 
+    // URL WhatsApp
+    const url = `https://wa.me/${telefone}?text=${texto}`;
+
+    // Abrir WhatsApp
     window.open(url, '_blank');
 
-    alert("Mensagem enviada! Estamos te redirecionando para o WhatsApp.");
+    // Feedback ao usuário
+    alert("Mensagem enviada com sucesso!");
+
+    // Opcional: limpar formulário
+    document.querySelector("form").reset();
 }
 </script>
+
 </body>
 </html>
