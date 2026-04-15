@@ -154,7 +154,7 @@
   <div class="container mx-auto px-6 max-w-xl">
     <h2 class="text-3xl font-bold mb-6 text-center">Contato e Orçamento</h2>
 
-    <form action="https://formsubmit.co/eb.lobato74@gmail.com" method="POST" class="space-y-4">
+    <form onsubmit="enviarWhatsApp(event)" class="space-y-4">
 
       <!-- ASSUNTO -->
       <select name="assunto" required class="w-full p-3 border rounded">
@@ -193,6 +193,47 @@
   btn.addEventListener('click', () => {
     menu.classList.toggle('hidden');
   });
+</script>
+
+<script>
+function enviarWhatsApp(event) {
+    event.preventDefault();
+
+    // Capturar valores
+    const assunto = document.querySelector('select[name="assunto"]').value;
+    const nome = document.querySelector('input[name="name"]').value;
+    const email = document.querySelector('input[name="email"]').value;
+    const mensagem = document.querySelector('textarea[name="message"]').value;
+
+    // Validação extra (garantia)
+    if (!assunto || !nome || !email || !mensagem) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+    }
+
+    // Montar mensagem
+    const texto = 
+`   *Novo contato pelo site SeeTech*%0A%0A
+    *Assunto:* ${assunto}%0A
+    *Nome:* ${nome}%0A
+    *Email:* ${email}%0A
+    *Mensagem:* ${mensagem}`;
+
+    // Número WhatsApp (sem espaços, traços ou parênteses)
+    const telefone = "5511982160046";
+
+    // URL WhatsApp
+    const url = `https://wa.me/${telefone}?text=${texto}`;
+
+    // Abrir WhatsApp
+    window.open(url, '_blank');
+
+    // Feedback ao usuário
+    alert("Mensagem enviada com sucesso!");
+
+    // Opcional: limpar formulário
+    document.querySelector("form").reset();
+}
 </script>
 
 </body>
