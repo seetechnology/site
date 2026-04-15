@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SeeTech | Transformação Digital e Cursos de Tecnologia</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', 'SEU_PIXEL_ID_AQUI');
+fbq('track', 'PageView');
+</script>
+
+<!-- GOOGLE ADS -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=759-335-5194"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '759-335-5194');
+</script>
+
+<style>
+.whatsapp-float{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.btn-primary{
+    background: linear-gradient(90deg,#2563eb,#7c3aed);
+}
+</style>
+
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+<!-- NAVBAR -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-gray-800">SeeTech</h1>
+    <nav class="hidden md:flex space-x-8">
+      <a href="#services" class="hover:text-blue-600">Serviços</a>
+      <a href="#courses" class="hover:text-blue-600">Cursos</a>
+      <a href="#about" class="hover:text-blue-600">Sobre</a>
+      <a href="#contact" class="hover:text-blue-600">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="h-screen flex items-center justify-center text-center text-white" style="background:url('./assets/images/Home/computers.PNG') center/cover;">
+  <div class="bg-black bg-opacity-60 p-10 rounded-xl max-w-3xl">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+      Aprenda Tecnologia e Transforme Sua Carreira
+    </h1>
+    <p class="text-lg md:text-xl mb-8">
+      Cursos de programação, análise de dados e consultoria em TI para acelerar seus resultados.
+    </p>
+    <div class="flex flex-col md:flex-row gap-4 justify-center">
+      <a href="#courses" class="btn-primary px-8 py-4 rounded-xl font-semibold">Quero Aprender Agora</a>
+      <a href="#contact" class="border px-8 py-4 rounded-xl">Falar com Especialista</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="services" class="py-20">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold mb-12">Soluções em Tecnologia</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+        <i class="fas fa-computer text-3xl mb-4 text-blue-600"></i>
+        <h3 class="text-xl font-bold mb-3">Montagem de PCs</h3>
+        <p>Computadores gamer e profissionais com alta performance.</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+        <i class="fas fa-code text-3xl mb-4 text-purple-600"></i>
+        <h3 class="text-xl font-bold mb-3">Desenvolvimento Web</h3>
+        <p>Sites modernos, rápidos e otimizados para vendas.</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+        <i class="fas fa-chart-line text-3xl mb-4 text-green-600"></i>
+        <h3 class="text-xl font-bold mb-3">Consultoria em TI</h3>
+        <p>Transformação digital para empresas crescerem.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CURSOS -->
+<section id="courses" class="py-20 bg-gray-100">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold mb-12">Cursos Profissionais</h2>
+
+    <div class="grid md:grid-cols-4 gap-6">
+
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="font-bold mb-2">Python</h3>
+        <p>Data Science e automação</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="font-bold mb-2">SQL</h3>
+        <p>Banco de dados profissional</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="font-bold mb-2">Excel + BI</h3>
+        <p>Análise de dados avançada</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="font-bold mb-2">Web Full Stack</h3>
+        <p>Do zero ao profissional</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="about" class="py-20">
+  <div class="container mx-auto px-6 text-center max-w-3xl">
+    <h2 class="text-4xl font-bold mb-6">Sobre a SeeTech</h2>
+    <p class="text-gray-600">
+      A SeeTech ajuda pessoas e empresas a evoluírem através da tecnologia.
+      Com experiência real de mercado, entregamos soluções e formação profissional.
+    </p>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center">
+  <h2 class="text-4xl font-bold mb-6">Pronto para mudar de vida?</h2>
+  <a href="#contact" class="bg-white text-black px-10 py-4 rounded-xl font-bold">Começar Agora</a>
+</section>
+
+<!-- CONTATO -->
+<section id="contact" class="py-20">
+  <div class="container mx-auto px-6 max-w-xl">
+    <h2 class="text-3xl font-bold mb-6 text-center">Fale Conosco</h2>
+
+    <form action="https://formsubmit.co/eb.lobato74@gmail.com" method="POST" onsubmit="trackForm()" class="space-y-4">
+
+      <select name="assunto" required class="w-full p-3 border rounded">
+        <option value="">Assunto</option>
+        <option>Montagem e manutenção de PCs</option>
+        <option>Desenvolvimento Web</option>
+        <option>Cursos de TI</option>
+        <option>Cartões de visita</option>
+      </select>
+
+      <input type="text" name="name" placeholder="Seu nome" required class="w-full p-3 border rounded">
+      <input type="email" name="email" placeholder="Seu email" required class="w-full p-3 border rounded">
+
+      <textarea name="message" placeholder="Mensagem" required class="w-full p-3 border rounded h-32"></textarea>
+
+      <button class="btn-primary w-full py-3 text-white rounded-xl">
+        ENVIAR E COMEÇAR
+      </button>
+
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black text-white text-center py-6">
+  <p>© 2026 SeeTech - Todos os direitos reservados</p>
+</footer>
+
+<!-- WHATSAPP FIXO -->
+<a href="https://wa.me/5511982160046" onclick="trackWhatsApp()" class="whatsapp-float">
+  <i class="fab fa-whatsapp text-green-500 text-5xl"></i>
+</a>
+
+</body>
+</html>

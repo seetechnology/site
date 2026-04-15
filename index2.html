@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aprenda TI e Ganhe Dinheiro | Cursos e Serviços em Tecnologia</title>
+
+<meta name="description" content="Aprenda programação, desenvolvimento web e tecnologia. Comece do zero e ganhe dinheiro com TI.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', 'SEU_PIXEL_ID_AQUI');
+fbq('track', 'PageView');
+</script>
+
+<!-- GOOGLE ADS -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=SEU_GOOGLE_ADS_ID_AQUI"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'SEU_GOOGLE_ADS_ID_AQUI');
+</script>
+
+<style>
+.btn-primary{
+  background: linear-gradient(90deg,#2563eb,#7c3aed);
+}
+.whatsapp-float{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+</style>
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+<!-- HERO AGRESSIVO -->
+<section class="h-screen flex items-center justify-center text-center text-white bg-black">
+  <div class="max-w-3xl px-6">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+      Aprenda Tecnologia do ZERO e Comece a Ganhar Dinheiro em Até 90 Dias
+    </h1>
+
+    <p class="text-lg mb-6">
+      Cursos de programação, desenvolvimento web e TI com foco em renda real.
+    </p>
+
+    <a href="https://wa.me/5511982160046" onclick="trackWhatsApp()" class="btn-primary px-10 py-4 rounded-xl text-white font-bold text-lg">
+      QUERO COMEÇAR AGORA
+    </a>
+
+    <p class="mt-4 text-sm opacity-80">
+      🔥 Vagas limitadas • Atendimento imediato via WhatsApp
+    </p>
+  </div>
+</section>
+
+<!-- PROVA SOCIAL -->
+<section class="py-16 text-center">
+  <h2 class="text-3xl font-bold mb-8">Resultados Reais</h2>
+  <div class="flex flex-col md:flex-row justify-center gap-10">
+    <div><h3 class="text-4xl font-bold">+500</h3><p>Alunos</p></div>
+    <div><h3 class="text-4xl font-bold">+100</h3><p>Projetos</p></div>
+    <div><h3 class="text-4xl font-bold">+5 anos</h3><p>Experiência</p></div>
+  </div>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section class="py-20 bg-gray-100 text-center">
+  <h2 class="text-3xl font-bold mb-10">O que você vai aprender</h2>
+
+  <div class="grid md:grid-cols-3 gap-6 px-6">
+    <div class="bg-white p-6 rounded shadow">
+      💻 Desenvolvimento Web Profissional
+    </div>
+    <div class="bg-white p-6 rounded shadow">
+      📊 Análise de Dados e Excel
+    </div>
+    <div class="bg-white p-6 rounded shadow">
+      🚀 Como ganhar dinheiro com TI
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 text-center">
+  <h2 class="text-3xl font-bold mb-6">
+    Comece hoje mesmo sua carreira em tecnologia
+  </h2>
+
+  <a href="https://wa.me/5511982160046" onclick="trackWhatsApp()" class="btn-primary px-10 py-4 rounded-xl text-white font-bold">
+    FALAR COM ESPECIALISTA
+  </a>
+</section>
+
+<!-- FORMULÁRIO -->
+<section class="py-20">
+  <div class="max-w-xl mx-auto px-6">
+
+    <h2 class="text-2xl font-bold mb-6 text-center">
+      Receba mais informações
+    </h2>
+
+    <form action="https://formsubmit.co/eb.lobato74@gmail.com" method="POST" onsubmit="trackForm()" class="space-y-4">
+
+      <select name="assunto" required class="w-full p-3 border rounded">
+        <option value="">Assunto</option>
+        <option>Montagem e manutenção de PCs</option>
+        <option>Desenvolvimento Web</option>
+        <option>Cursos de TI</option>
+        <option>Cartões de visita</option>
+      </select>
+
+      <input type="text" name="name" placeholder="Seu nome" required class="w-full p-3 border rounded">
+      <input type="email" name="email" placeholder="Seu email" required class="w-full p-3 border rounded">
+
+      <textarea name="message" placeholder="Mensagem" required class="w-full p-3 border rounded h-32"></textarea>
+
+      <button class="btn-primary w-full py-3 text-white rounded-xl">
+        ENVIAR E COMEÇAR
+      </button>
+
+    </form>
+  </div>
+</section>
+
+<!-- WHATSAPP FIXO -->
+<a href="https://wa.me/5511982160046" onclick="trackWhatsApp()" class="whatsapp-float">
+  <i class="fab fa-whatsapp text-green-500 text-5xl"></i>
+</a>
+
+<!-- TRACKING EVENTS -->
+<script>
+function trackWhatsApp(){
+  fbq('track', 'Lead');
+  gtag('event', 'conversion', {
+    'send_to': 'SEU_GOOGLE_ADS_ID_AQUI/SEU_LABEL_CONVERSAO_AQUI'
+  });
+}
+
+function trackForm(){
+  fbq('track', 'Lead');
+  gtag('event', 'conversion', {
+    'send_to': 'SEU_GOOGLE_ADS_ID_AQUI/SEU_LABEL_CONVERSAO_AQUI'
+  });
+}
+</script>
+
+</body>
+</html>
