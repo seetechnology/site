@@ -35,18 +35,17 @@
 
   // Menu mobile
   var toggle = byId("menuToggle");
-  var mobileNav = byId("mobileNav");
-  toggle.addEventListener("click", function () {
-    var open = mobileNav.hasAttribute("hidden");
-    if (open) {
-      mobileNav.removeAttribute("hidden");
-    } else {
-      mobileNav.setAttribute("hidden", "");
-    }
-    toggle.setAttribute("aria-expanded", String(open));
-    toggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
-    toggle.textContent = open ? "✕" : "☰";
-  });
+  const menuToggle = document.getElementById("menuToggle");
+const mobileNav = document.getElementById("mobileNav");
+
+menuToggle.addEventListener("click", () => {
+    mobileNav.toggleAttribute("hidden");
+
+    menuToggle.setAttribute(
+        "aria-expanded",
+        !mobileNav.hasAttribute("hidden")
+    );
+});
   mobileNav.addEventListener("click", function (e) {
     if (e.target.tagName === "A") {
       mobileNav.setAttribute("hidden", "");
