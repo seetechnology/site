@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SEE TECH | Cartão Digital PRO</title>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:'Segoe UI',sans-serif;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+min-height:100vh;
+
+background:
+linear-gradient(135deg,rgba(10,20,40,0.9),rgba(31,163,184,0.85)),
+url('computers.webp') center/cover no-repeat;
+
+color:white;
+
+}
+
+.card{
+
+width:390px;
+max-width:94vw;
+
+min-height:92vh;
+
+padding:30px;
+
+border-radius:26px;
+
+backdrop-filter:blur(18px);
+
+background:rgba(255,255,255,0.08);
+
+box-shadow:0 25px 60px rgba(0,0,0,0.5);
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
+text-align:center;
+
+animation:entrada 1s ease;
+
+}
+
+@keyframes entrada{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.logo{
+width:150px;
+margin-bottom:10px;
+}
+
+.avatar{
+
+width:90px;
+height:90px;
+
+border-radius:50%;
+
+border:3px solid rgba(255,255,255,.5);
+
+margin:10px 0;
+
+object-fit:cover;
+
+}
+
+.subtitle{
+font-size:14px;
+opacity:.9;
+}
+
+.name{
+font-size:22px;
+font-weight:bold;
+margin-top:6px;
+}
+
+.role{
+font-size:15px;
+opacity:.85;
+margin-bottom:30px;
+}
+
+.qr{
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
+margin-top:20px;
+
+}
+
+.qrbox{
+
+width:260px;
+height:260px;
+
+background:white;
+
+border-radius:18px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+.qr p{
+
+margin-top:15px;
+
+font-size:16px;
+
+font-weight:bold;
+
+}
+
+.footer{
+
+margin-top:auto;
+
+padding-top:25px;
+
+font-size:12px;
+
+opacity:.7;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<img src="seetech.svg" class="logo">
+
+<p class="subtitle">Serviços em Informática & Treinamentos</p>
+
+<img src="Fotorosto.jpg" class="avatar">
+
+<p class="name">Eduardo Bacarine Lobato</p>
+
+<p class="role">CEO & Diretor de Tecnologia</p>
+
+<div class="qr">
+
+<div class="qrbox">
+
+<canvas id="cardQR"></canvas>
+
+</div>
+
+<p>Acesse meu Cartão Profissional</p>
+
+</div>
+
+<div class="footer">
+
+Cartão digital interativo • SEE TECH
+
+</div>
+
+</div>
+
+<script>
+
+QRCode.toCanvas(
+
+document.getElementById('cardQR'),
+
+'https://www.seetech.com.br/professional2.html',
+
+{
+width:220,
+margin:2
+}
+
+);
+
+</script>
+
+</body>
+
+</html>

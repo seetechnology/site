@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SEE TECH | Cartão Digital PRO</title>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:'Segoe UI',sans-serif;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+min-height:100vh;
+
+background:
+linear-gradient(135deg,rgba(10,20,40,0.9),rgba(31,163,184,0.85)),
+url('computers.webp') center/cover no-repeat;
+
+color:white;
+
+}
+
+.card{
+
+width:390px;
+max-width:94vw;
+
+min-height:92vh;
+
+padding:30px;
+
+border-radius:26px;
+
+backdrop-filter:blur(18px);
+
+background:rgba(255,255,255,0.08);
+
+box-shadow:0 25px 60px rgba(0,0,0,0.5);
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
+text-align:center;
+
+animation:entrada 1s ease;
+
+}
+
+@keyframes entrada{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+.logo{
+width:150px;
+margin-bottom:10px;
+}
+
+.avatar{
+
+width:90px;
+height:90px;
+
+border-radius:50%;
+
+border:3px solid rgba(255,255,255,0.5);
+
+margin:10px 0;
+
+object-fit:cover;
+
+}
+
+.subtitle{
+font-size:14px;
+opacity:0.9;
+}
+
+.name{
+font-size:20px;
+font-weight:bold;
+margin-top:6px;
+}
+
+.role{
+font-size:14px;
+opacity:0.8;
+margin-bottom:14px;
+}
+
+.buttons{
+
+display:flex;
+gap:12px;
+margin-bottom:20px;
+
+}
+
+.btn{
+
+padding:10px 16px;
+
+border-radius:30px;
+
+background:#1fa3b8;
+
+color:white;
+
+font-size:14px;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+transform:scale(1.08);
+background:#1490a3;
+
+}
+
+.qrcodes{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:18px;
+
+margin-top:10px;
+
+}
+
+.qr{
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
+}
+
+.qrbox{
+
+width:135px;
+height:135px;
+
+background:white;
+
+border-radius:14px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+}
+
+.qr p{
+color:white;
+margin-top:6px;
+font-size:12px;
+}
+
+.socials{
+
+margin-top:18px;
+
+display:flex;
+gap:16px;
+
+}
+
+.socials a{
+
+color:white;
+font-size:26px;
+
+transition:.3s;
+
+}
+
+.socials a:hover{
+
+transform:scale(1.25);
+color:#1fa3b8;
+
+}
+
+.footer{
+
+font-size:11px;
+opacity:0.6;
+margin-top:15px;
+
+}
+
+.links-grid{
+
+width:100%;
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:18px;
+
+margin-top:25px;
+
+margin-bottom:25px;
+
+}
+
+.links-grid a{
+
+text-decoration:none;
+
+color:white;
+
+background:rgba(255,255,255,.10);
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:18px;
+
+padding:22px 10px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+transition:.35s;
+
+backdrop-filter:blur(8px);
+
+}
+
+.links-grid a:hover{
+
+background:#1fa3b8;
+
+transform:translateY(-6px) scale(1.05);
+
+box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+}
+
+.links-grid i{
+
+font-size:44px;
+
+margin-bottom:12px;
+
+}
+
+.links-grid span{
+
+font-size:15px;
+
+font-weight:600;
+
+}
+
+.links-grid a:last-child{
+
+grid-column:1 / 3;
+
+justify-self:center;
+
+width:65%;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<img src="seetech.svg" class="logo">
+
+<p class="subtitle">Serviços em Informática & Treinamentos</p>
+
+<img src="Fotorosto.jpg" class="avatar">
+
+<p class="name">Eduardo Bacarine Lobato</p>
+<p class="role">CEO & Diretor de Tecnologia</p>
+
+<div class="buttons">
+
+<a class="btn" href="contato.vcf">Salvar contato</a>
+
+<a class="btn" href="https://api.whatsapp.com/send?phone=5511982160046">WhatsApp</a>
+
+</div>
+
+<div class="links-grid">
+
+<a href="https://www.facebook.com/eblseetech/" target="_blank">
+<i class="fab fa-facebook"></i>
+<span>Facebook</span>
+</a>
+
+<a href="https://www.instagram.com/prof_eduardolobato/" target="_blank">
+<i class="fab fa-instagram"></i>
+<span>Instagram</span>
+</a>
+
+<a href="https://www.linkedin.com/in/eduardoblobato/" target="_blank">
+<i class="fab fa-linkedin"></i>
+<span>LinkedIn</span>
+</a>
+
+<a href="https://www.seetech.com.br" target="_blank">
+<i class="fa-solid fa-globe"></i>
+<span>Website</span>
+</a>
+
+<a href="mailto:eb.lobato74@gmail.com">
+<i class="fa-solid fa-envelope"></i>
+<span>E-mail</span>
+</a>
+
+</div>
+
+<div class="footer">
+Cartão digital interativo • SEE TECH
+</div>
+
+</body>
+</html>
