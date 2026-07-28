@@ -1,212 +1,249 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>SeeTech | Cursos de TI, Desenvolvimento Web e Consultoria em Tecnologia</title>
-
-<meta name="description" content="Cursos de programação, desenvolvimento web, montagem de computadores e consultoria em TI. Aprenda tecnologia e transforme sua carreira com a SeeTech.">
-
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-  .btn-primary{
-    background: linear-gradient(90deg,#2563eb,#7c3aed);
-  }
-
-  .whatsapp-float{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999;
-  }
-</style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SeeTech — Cursos de Tecnologia, Sites e Manutenção de PCs</title>
+<meta name="description" content="SeeTech: cartões virtuais interativos, montagem e manutenção de computadores, criação de sites e cursos de tecnologia em São Paulo desde 2017." />
+<meta property="og:title" content="SeeTech — Informática e Treinamentos" />
+<meta property="og:description" content="Cartões virtuais interativos, manutenção de computadores, desenvolvimento web e cursos de tecnologia. Mais de 1000 alunos formados." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="canonical" href="./" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./styles.css" />
 </head>
+<body id="top">
 
-<body class="bg-gray-50 font-sans">
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="#top">
+      <img class="logo-mark" src="./img/seetech-logo.svg" alt="SeeTech — Informática e Treinamentos" width="140" height="40" />
+    </a>
 
-<!-- NAVBAR -->
-<header class="bg-white shadow-md sticky top-0 z-50">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    
-    <h1 class="text-2xl font-bold text-gray-800">SeeTech</h1>
-
-    <!-- MENU DESKTOP -->
-    <nav class="hidden md:flex space-x-8">
-      <a href="#services" class="hover:text-blue-600">Serviços</a>
-      <a href="#courses" class="hover:text-blue-600">Cursos</a>
-      <a href="#about" class="hover:text-blue-600">Sobre</a>
-      <a href="#contact" class="hover:text-blue-600">Contato</a>
+    <nav class="nav-desktop" aria-label="Principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
     </nav>
 
-    <!-- BOTÃO MOBILE -->
-    <button id="menu-btn" class="md:hidden text-2xl">
-      <i class="fas fa-bars"></i>
-    </button>
+    <a class="btn btn-primary btn-sm nav-cta" id="headerWhats" href="https://wa.me/5511982160046" target="_blank" rel="noopener noreferrer">Falar agora</a>
 
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav">☰</button>
   </div>
 
-  <!-- MENU MOBILE -->
-  <div id="mobile-menu" class="hidden flex flex-col items-center bg-white py-4 space-y-4 md:hidden">
-    <a href="#services">Serviços</a>
-    <a href="#courses">Cursos</a>
-    <a href="#about">Sobre</a>
-    <a href="#contact">Contato</a>
-  </div>
+  <nav class="nav-mobile" id="mobileNav" hidden aria-label="Menu móvel">
+    <a href="#servicos">Serviços</a>
+    <a href="#cursos">Cursos</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+  </nav>
 </header>
 
-<!-- HERO -->
-<section class="h-screen flex items-center justify-center text-center text-white" style="background:url('./assets/images/Home/computers.PNG') center/cover;">
-  <div class="bg-black bg-opacity-60 p-10 rounded-xl max-w-3xl">
-    <h1 class="text-4xl md:text-6xl font-bold mb-6">
-      Cursos de Tecnologia, Programação e Desenvolvimento Web Profissional
-    </h1>
-    <p class="text-lg md:text-xl mb-8">
-      Aprenda programação, análise de dados, desenvolvimento web e tecnologia da informação com especialistas.
-    </p>
-    <div class="flex flex-col md:flex-row gap-4 justify-center">
-      <a href="#courses" class="btn-primary px-8 py-4 rounded-xl font-semibold">Aprender Programação Agora</a>
-      <a href="#contact" class="border px-8 py-4 rounded-xl">Falar com Especialista em TI</a>
+<main>
+  <section class="hero">
+    <img class="hero-bg" src="./img/hero.jpg" alt="Setup de computador montado pela SeeTech com iluminação azul" width="1600" height="1104" />
+    <div class="hero-veil"></div>
+    <div class="container hero-content">
+      <span class="pill">São Paulo · Zona Norte · desde 2017</span>
+      <h1>Tecnologia que resolve. <span class="grad">Ensino que transforma.</span></h1>
+      <p class="lead">Cartões virtuais interativos, computadores sob medida, sites que vendem e cursos de tecnologia com professor certificado Microsoft e mais de 1000 alunos formados.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#servicos">Ver serviços</a>
+        <a class="btn btn-outline js-whats" data-msg="Olá, SeeTech! Gostaria de um orçamento." href="https://wa.me/5511982160046" target="_blank" rel="noopener noreferrer">Pedir orçamento</a>
+      </div>
+      <dl class="stats">
+        <div><dd>1000+</dd><dt>alunos formados</dt></div>
+        <div><dd>10+</dd><dt>anos de experiência</dt></div>
+        <div><dd>2017</dd><dt>desde a fundação</dt></div>
+      </dl>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SERVIÇOS -->
-<section id="services" class="py-20">
-  <div class="container mx-auto px-6 text-center">
-    <h2 class="text-4xl font-bold mb-12">Serviços de Tecnologia da Informação</h2>
+  <section id="servicos" class="container section">
+    <h2>Nossos serviços</h2>
+    <p class="sub">Quatro frentes para colocar você e sua empresa à frente da concorrência.</p>
 
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid grid-2">
+      <article class="card">
+        <img src="./img/servico-cartoes.jpg" alt="Cartão virtual interativo em um smartphone" loading="lazy" width="900" height="700" />
+        <div class="card-body">
+          <h3>Cartões Virtuais Interativos</h3>
+          <p>Seu contato, portfólio e redes em um só link com QR Code. Compartilhe em segundos e nunca mais fique sem cartão.</p>
+          <ul>
+            <li>Link e QR Code próprios</li>
+            <li>Botões de WhatsApp e Pix</li>
+            <li>Atualização ilimitada</li>
+          </ul>
+          <a class="link js-whats" data-msg="Olá, SeeTech! Tenho interesse em: Cartões Virtuais Interativos." href="https://wa.me/5511982160046" target="_blank" rel="noopener noreferrer">Solicitar orçamento →</a>
+        </div>
+      </article>
 
-      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
-        <i class="fas fa-computer text-3xl mb-4 text-blue-600"></i>
-        <h3 class="text-xl font-bold mb-3">Montagem e Manutenção de Computadores</h3>
-        <p>Montagem de PCs gamer, manutenção de computadores e upgrade de hardware profissional.</p>
-      </div>
+      <article class="card">
+        <img src="./img/servico-hardware.jpg" alt="Montagem e manutenção de computadores" loading="lazy" width="900" height="700" />
+        <div class="card-body">
+          <h3>Venda, Montagem e Manutenção de PCs</h3>
+          <p>Montagem de PCs gamer e corporativos, upgrades, limpeza, formatação e diagnóstico com peças homologadas.</p>
+          <ul>
+            <li>Orçamento sem compromisso</li>
+            <li>Upgrade de SSD, RAM e GPU</li>
+            <li>Atendimento a empresas e pessoas físicas</li>
+          </ul>
+          <a class="link js-whats" data-msg="Olá, SeeTech! Tenho interesse em: Venda, Montagem e Manutenção de PCs." href="https://wa.me/5511982160046" target="_blank" rel="noopener noreferrer">Solicitar orçamento →</a>
+        </div>
+      </article>
 
-      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
-        <i class="fas fa-code text-3xl mb-4 text-purple-600"></i>
-        <h3 class="text-xl font-bold mb-3">Desenvolvimento de Sites e Sistemas Web</h3>
-        <p>Criação de sites profissionais, landing pages e sistemas web otimizados para vendas.</p>
-      </div>
+      <article class="card">
+        <img src="./img/servico-web.jpg" alt="Desenvolvimento de sites e sistemas web" loading="lazy" width="900" height="700" />
+        <div class="card-body">
+          <h3>Desenvolvimento de Sites</h3>
+          <p>Sites institucionais, landing pages e sistemas web rápidos, responsivos e preparados para aparecer no Google.</p>
+          <ul>
+            <li>Design responsivo</li>
+            <li>SEO e performance</li>
+            <li>Integração com WhatsApp</li>
+          </ul>
+          <a class="link js-whats" data-msg="Olá, SeeTech! Tenho interesse em: Desenvolvimento de Sites." href="https://wa.me/5511982160046" target="_blank" rel="noopener noreferrer">Solicitar orçamento →</a>
+        </div>
+      </article>
 
-      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
-        <i class="fas fa-chart-line text-3xl mb-4 text-green-600"></i>
-        <h3 class="text-xl font-bold mb-3">Consultoria em TI e Transformação Digital</h3>
-        <p>Consultoria em tecnologia da informação para empresas crescerem e automatizarem processos.</p>
-      </div>
-
+      <article class="card">
+        <img src="./img/servico-cursos.jpg" alt="Sala de aula de cursos de tecnologia" loading="lazy" width="900" height="700" />
+        <div class="card-body">
+          <h3>Cursos de Tecnologia</h3>
+          <p>Formação prática e presencial ou online, com projetos reais e acompanhamento direto do professor.</p>
+          <ul>
+            <li>Turmas reduzidas</li>
+            <li>Projetos para portfólio</li>
+            <li>Certificado de conclusão</li>
+          </ul>
+          <a class="link js-whats" data-msg="Olá, SeeTech! Tenho interesse em: Cursos de Tecnologia." href="https://wa.me/5511982160046" target="_blank" rel="noopener noreferrer">Solicitar orçamento →</a>
+        </div>
+      </article>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CURSOS -->
-<section id="courses" class="py-20 bg-gray-100">
-  <div class="container mx-auto px-6 text-center">
-    <h2 class="text-4xl font-bold mb-12">Cursos Profissionais de Tecnologia</h2>
+  <section id="cursos" class="band">
+    <div class="container section">
+      <h2>Cursos de tecnologia</h2>
+      <p class="sub">Aulas práticas, turmas reduzidas e projetos que viram portfólio.</p>
 
-    <div class="grid md:grid-cols-4 gap-6">
-
-      <div class="bg-white p-6 rounded-xl shadow">
-        <h3 class="font-bold mb-2">Curso de Python</h3>
-        <p>Programação, automação e Data Science</p>
+      <div class="grid grid-4">
+        <article class="mini">
+          <h3>Full Stack Web</h3>
+          <p>HTML, CSS, JavaScript, Python, banco de dados e deploy de projetos reais.</p>
+          <p class="tag">Do zero ao profissional</p>
+        </article>
+        <article class="mini">
+          <h3>Análise de Dados</h3>
+          <p>Excel avançado, Power BI e SQL Server para análise de dados no dia a dia.</p>
+          <p class="tag">Iniciante e intermediário</p>
+        </article>
+        <article class="mini">
+          <h3>Robótica</h3>
+          <p>Arduino, sensores, eletrônica e lógica de programação aplicada a projetos físicos.</p>
+          <p class="tag">Jovens e adultos</p>
+        </article>
+        <article class="mini">
+          <h3>Microsoft Office</h3>
+          <p>Word, Excel, Power Point, Access e Introdução à IA, voltados à produtividade para o mercado de trabalho.</p>
+          <p class="tag">Básico ao avançado</p>
+        </article>
       </div>
 
-      <div class="bg-white p-6 rounded-xl shadow">
-        <h3 class="font-bold mb-2">Curso de SQL</h3>
-        <p>Banco de dados e análise de dados</p>
-      </div>
-
-      <div class="bg-white p-6 rounded-xl shadow">
-        <h3 class="font-bold mb-2">Curso de Excel e Power BI</h3>
-        <p>Business Intelligence e dashboards</p>
-      </div>
-
-      <div class="bg-white p-6 rounded-xl shadow">
-        <h3 class="font-bold mb-2">Curso de Desenvolvimento Web Full Stack</h3>
-        <p>HTML, CSS, JavaScript e projetos reais</p>
-      </div>
-
+      <p class="mt">
+        <a class="btn btn-primary js-whats" data-msg="Olá, SeeTech! Quero informações sobre os cursos e turmas." href="https://wa.me/5511982160046" target="_blank" rel="noopener noreferrer">Quero saber sobre as turmas</a>
+      </p>
     </div>
+  </section>
+
+  <section id="sobre" class="container section">
+    <div class="grid about">
+      <div>
+        <h2>SeeTech — Informática e Treinamentos</h2>
+        <p class="tag">Fundada em 2017 · São Paulo, SP</p>
+      </div>
+      <div class="prose">
+        <p>Sediada na zona norte da capital de São Paulo, a SeeTech foi fundada em 2017 por <strong>Eduardo B. Lobato</strong>, Analista Programador Certificado Microsoft, professor licenciado na Faculdade de Tecnologia de São Paulo com mais de 10 anos de experiência e palestrante formado pelo Instituto Gente.</p>
+        <p>Entre nossos serviços destacam-se montagem e manutenção de computadores, desenvolvimento de sites e sistemas web, cartões de visita virtuais e interativos e os cursos de tecnologia, que já formaram mais de 1000 alunos.</p>
+        <p>Nosso compromisso é oferecer soluções tecnológicas de alta qualidade, ajudando nossos clientes a alcançar seus objetivos e transformar suas carreiras.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="band">
+    <div class="container section grid grid-2">
+      <div>
+        <h2>Vamos conversar</h2>
+        <p class="sub">Conte o que você precisa e responderemos rapidamente. Utilizamos o WhatsApp por ser o canal mais rápido.</p>
+        <ul class="contact-list">
+          <li><a class="js-whats" data-msg="Olá, SeeTech!" href="https://wa.me/5511982160046" target="_blank" rel="noopener noreferrer">WhatsApp <span id="whatsLabel"></span></a></li>
+          <li id="cityLine"></li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <form action="https://formsubmit.co/seetech.atendimento@gmail.com" method="POST" onsubmit="enviarWhatsApp(event)">
+          <div class="grid grid-2 gap">
+            <p class="field">
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" type="text" maxlength="100" placeholder="Como podemos te chamar?" required />
+              <span class="err" data-err="nome"></span>
+            </p>
+            <p class="field">
+              <label for="contato">WhatsApp ou e-mail</label>
+              <input id="contato" name="contato" type="text" maxlength="120" placeholder="(11) 90000-0000" required />
+              <span class="err" data-err="contato"></span>
+            </p>
+          </div>
+          <p class="field">
+            <label for="assunto">Assunto</label>
+            <select id="assunto" name="assunto" required>
+              <option>Cartões Virtuais Interativos</option>
+              <option>Venda, montagem e manutenção de computadores</option>
+              <option>Desenvolvimento de sites e sistemas</option>
+              <option>Cursos de tecnologia</option>
+            </select>
+          </p>
+          <p class="field">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" maxlength="1000" placeholder="Descreva o que você precisa e o prazo desejado." required></textarea>
+            <span class="err" data-err="mensagem"></span>
+          </p>
+          <div class="actions">
+            <button class="btn btn-primary" type="submit">Enviar pelo WhatsApp</button>
+          </div>
+          <p class="note">Ao enviar, abrimos uma conversa já preenchida no WhatsApp. Resposta em até 1 dia útil.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <img class="logo-mark" src="./img/seetech-logo.svg" alt="SeeTech" width="120" height="34" loading="lazy" />
+    <p>© <span id="year"></span> SeeTech — Cartões virtuais, manutenção de computadores, desenvolvimento web e cursos de tecnologia.</p>
   </div>
-</section>
-
-<!-- SOBRE -->
-<section id="about" class="py-20">
-  <div class="container mx-auto px-6 text-center max-w-3xl">
-    <h2 class="text-4xl font-bold mb-6">SeeTech - Informática e Treinamentos</h2>
-    <p class="text-gray-600"><div align="justify">
-      Sediada na zona norte da capital de São Paulo, a See Tech é uma empresa fundada em 2017, por Eduardo B. Lobato, Analista Programador Certificado Microsoft, Professor Licenciado na Faculdade de Tecnologia de São Paulo com mais de 10 anos de experiência, e Palestrante formado pelo Instituto Gente, ministrado por Roberto Shinyashiki e equipe. Dentre nossos serviços, destacam-se Montagem e Manutenção de Computadores, Desenvolvimento de Sites e Sistemas Web, Cartões de Visita virtuais e interativos e nossos cursos em tecnologia, que já formaram mais de 1000 alunos. Nosso compromisso é oferecer soluções tecnológicas de alta qualidade, ajudando nossos clientes a alcançar seus objetivos e transformar suas carreiras.
-    </div></p>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center">
-  <h2 class="text-4xl font-bold mb-6">Aprenda Tecnologia e Ganhe Dinheiro com TI</h2>
-  <a href="#contact" class="bg-white text-black px-10 py-4 rounded-xl font-bold">Começar Agora</a>
-</section>
-
-<!-- CONTATO -->
-<section id="contact" class="py-20">
-  <div class="container mx-auto px-6 max-w-xl">
-    <h2 class="text-3xl font-bold mb-6 text-center">Contato e Orçamento</h2>
-
-    <form action="https://formsubmit.co/seetech.atendimento@gmail.com" method="POST" onsubmit="enviarWhatsApp(event)">
-
-      <!-- ASSUNTO -->
-      <select name="assunto" required class="w-full p-3 border rounded">
-        <option value="">Selecione o assunto</option>
-        <option>Montagem e manutenção de PCs</option>
-        <option>Desenvolvimento Web</option>
-        <option>Cursos de TI</option>
-        <option>Cartões de visita</option>
-      </select>
-
-      <input type="text" name="name" placeholder="Seu nome" required class="w-full p-3 border rounded">
-      <input type="email" name="email" placeholder="Seu email" required class="w-full p-3 border rounded">
-
-      <textarea name="message" placeholder="Digite sua mensagem" required class="w-full p-3 border rounded h-32"></textarea>
-
-      <button class="btn-primary w-full py-3 text-white rounded-xl">Enviar Mensagem</button>
-    </form>
-  </div>
-</section>
-
-<!-- WHATSAPP FIXO -->
-<a href="https://wa.me/5511982160046" target="_blank" class="whatsapp-float">
-  <i class="fab fa-whatsapp text-green-500 text-5xl drop-shadow-lg"></i>
-</a>
-
-<!-- FOOTER -->
-<footer class="bg-black text-white text-center py-6">
-  <p>© 2026 SeeTech - Cursos de Tecnologia, Desenvolvimento Web e Consultoria em TI</p>
 </footer>
 
-<!-- SCRIPT MENU MOBILE -->
-<script>
-  const btn = document.getElementById('menu-btn');
-  const menu = document.getElementById('mobile-menu');
-
-  btn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
-</script>
-
+<script src="./script.js" defer></script>
 <script>
 function enviarWhatsApp(event) {
     event.preventDefault();
 
     // Capturar valores
+    const nome = document.querySelector('input[name="nome"]').value;
+    const contato = document.querySelector('input[name="contato"]').value;
     const assunto = document.querySelector('select[name="assunto"]').value;
-    const nome = document.querySelector('input[name="name"]').value;
-    const email = document.querySelector('input[name="email"]').value;
-    const mensagem = document.querySelector('textarea[name="message"]').value;
+    const mensagem = document.querySelector('textarea[name="mensagem"]').value;
 
     // Validação extra (garantia)
-    if (!assunto || !nome || !email || !mensagem) {
+    if (!assunto || !nome || !contato || !mensagem) {
         alert("Por favor, preencha todos os campos.");
         return;
     }
@@ -216,7 +253,7 @@ function enviarWhatsApp(event) {
 `   *Novo contato pelo site SeeTech*%0A%0A
     *Assunto:* ${assunto}%0A
     *Nome:* ${nome}%0A
-    *Email:* ${email}%0A
+    *contato:* ${contato}%0A
     *Mensagem:* ${mensagem}`;
 
     // Número WhatsApp (sem espaços, traços ou parênteses)
@@ -235,6 +272,5 @@ function enviarWhatsApp(event) {
     document.querySelector("form").reset();
 }
 </script>
-
 </body>
 </html>
