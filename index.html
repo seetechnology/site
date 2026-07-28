@@ -35,13 +35,13 @@
 
     <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav">☰</button>
   </div>
-
-  <nav class="nav-mobile" id="mobileNav" hidden aria-label="Menu móvel">
-    <a href="#servicos">Serviços</a>
-    <a href="#cursos">Cursos</a>
-    <a href="#sobre">Sobre</a>
+  <div align="center">
+  <nav class="hidden md:hidden flex-col space-y-4 px-6 pb-4 bg-white shadow-md transform transition-all duration-300 ease-in-out opacity-0 -translate-y-5" id="mobileNav" hidden aria-label="Menu móvel">
+    <a href="#servicos">Serviços</a>&nbsp;&nbsp;&nbsp;
+    <a href="#cursos">Cursos</a>&nbsp;&nbsp;&nbsp;
+    <a href="#sobre">Sobre</a>&nbsp;&nbsp;&nbsp;
     <a href="#contato">Contato</a>
-  </nav>
+  </nav></div>
 </header>
 
 <main>
@@ -181,7 +181,7 @@
         <h2>Vamos conversar</h2>
         <p class="sub">Conte o que você precisa e responderemos rapidamente. Utilizamos o WhatsApp por ser o canal mais rápido.</p>
         <ul class="contact-list">
-          <li><a class="js-whats" data-msg="Olá, SeeTech!" href="https://wa.me/5511982160046" target="_blank" rel="noopener noreferrer">WhatsApp <span id="whatsLabel"></span></a></li>
+          <li><a class="js-whats" data-msg="Olá, SeeTech!" href="https://wa.me/5511982160046" target="_blank" rel="noopener noreferrer">WhatsApp - (11) 98216-0046</span></a></li>
           <li id="cityLine"></li>
         </ul>
       </div>
