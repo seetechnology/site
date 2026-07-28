@@ -272,5 +272,19 @@ function enviarWhatsApp(event) {
     document.querySelector("form").reset();
 }
 </script>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileNav = document.getElementById("mobileNav");
+
+  menuToggle.addEventListener("click", () => {
+    mobileNav.toggleAttribute("hidden");
+
+    menuToggle.setAttribute(
+        "aria-expanded",
+        !mobileNav.hasAttribute("hidden")
+    );
+});
+</script>
 </body>
 </html>
